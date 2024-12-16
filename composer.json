@@ -1,0 +1,56 @@
+{
+  "name": "techork/payment-es-laravel",
+  "type": "library",
+  "authors": [
+    {
+      "name": "andrea.palladio",
+      "email": "andrea.palladio@kiv.dev"
+    }
+  ],
+  "require": {
+    "php": "^8.4",
+    "techork/payment-es": "dev-master",
+    "illuminate/support": "^11.0 || ^12.0",
+    "illuminate/contracts": "^11.0 || ^12.0",
+    "eventsauce/id-encoding": "^1.0",
+    "eventsauce/message-repository-table-schema": "^1.0",
+    "symfony/serializer": "^7.0",
+    "symfony/property-access": "^7.0",
+    "illuminate/console": "^11.0 || ^12.0",
+    "illuminate/validation": "^11.0 || ^12.0",
+    "illuminate/queue": "^11.0 || ^12.0"
+  },
+  "require-dev": {
+    "pestphp/pest": "^3.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "PaymentSystem\\Laravel\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "PaymentSystem\\Laravel\\Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:Sanchous98/payment-es.git"
+    }
+  ],
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "PaymentSystem\\Laravel\\PaymentProvider"
+      ]
+    }
+  }
+}
